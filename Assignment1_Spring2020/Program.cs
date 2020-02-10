@@ -31,6 +31,9 @@ namespace Assignment1_Spring2020
             string[] words = new string[] { "abcd", "dcba", "lls", "s", "sssll" };
             Console.WriteLine("Palindrome indices:");
             PalindromePairs(words);
+            
+            Console.WriteLine("Combination where Player 1 wins:");
+            Stones(21);
 
         }
 
@@ -259,7 +262,7 @@ namespace Assignment1_Spring2020
                 int turns_player2 = n4 / 4; // calculates no. of turns that player 2 requires to win the game
                 int stones_PLayer2 = turns_player2 * 4; //no. of stones required for player 2 to win.
                 int turns_player1 = (stones_PLayer2) / 2 + 1;// no. of turns required when Player 1 wins
-                int[] turns = new int[turns_player1];
+                int[] turns = new int[turns_player1+2];
                 Random var = new Random();//initializing an instance of random to generate the moves of Player2
 
                 if (n4 % 4 !=0)
